@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aryan Sahu - Frontend Developer | React & Next.js Specialist</title>
+    <meta name="description" content="Frontend Developer specializing in React, Next.js & TypeScript. IIT Ropar CS Graduate building production-ready web applications.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .skill-badge {
+            transition: transform 0.2s ease;
+        }
+        
+        .skill-badge:hover {
+            transform: scale(1.05);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-md shadow-sm fixed w-full top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold gradient-text">Aryan Sahu</h1>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="text-gray-600 hover:text-purple-600 transition">About</a>
+                <a href="#projects" class="text-gray-600 hover:text-purple-600 transition">Projects</a>
+                <a href="#skills" class="text-gray-600 hover:text-purple-600 transition">Skills</a>
+                <a href="#contact" class="text-gray-600 hover:text-purple-600 transition">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-gray-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-2 space-y-2">
+                <a href="#about" class="block text-gray-600 hover:text-purple-600 py-2">About</a>
+                <a href="#projects" class="block text-gray-600 hover:text-purple-600 py-2">Projects</a>
+                <a href="#skills" class="block text-gray-600 hover:text-purple-600 py-2">Skills</a>
+                <a href="#contact" class="block text-gray-600 hover:text-purple-600 py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="max-w-4xl mx-auto text-center text-white relative z-10 animate-fade-in-up">
+            <div class="inline-block mb-6 px-4 py-2 glass-effect rounded-full text-sm font-medium">
+                🚀 Open to Opportunities | Ready for Relocation
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                Hi, I'm <span class="text-yellow-300">Aryan Sahu</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-6 text-gray-100">
+                Frontend Developer specializing in React, Next.js & TypeScript
+            </p>
+            <p class="text-lg text-gray-200 mb-8 max-w-2xl mx-auto">
+                IIT Ropar CS Graduate building production-ready web applications with modern technologies. 
+                Passionate about creating intuitive, responsive user interfaces and real-time collaborative systems.
+            </p>
+            <div class="flex gap-4 justify-center flex-wrap">
+                <a href="#projects" class="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition transform hover:scale-105">
+                    View Projects
+                </a>
+                <a href="https://github.com/Aryan-Dev26" target="_blank" class="glass-effect text-white px-8 py-3 rounded-lg font-medium hover:bg-white/20 transition">
+                    GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/aryansahu2891" target="_blank" class="glass-effect text-white px-8 py-3 rounded-lg font-medium hover:bg-white/20 transition">
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Frontend Developer & Problem Solver</h3>
+                    <p class="text-gray-600 mb-4">
+                        I'm a passionate frontend developer with a strong foundation in computer science from IIT Ropar. 
+                        I specialize in building modern, responsive web applications using React, Next.js, and TypeScript.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        My experience spans from creating interactive educational platforms serving 10,000+ users to 
+                        building real-time collaborative tools with advanced features like live document editing and video calls.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <span class="w-2 h-2 bg-purple-600 rounded-full"></span>
+                            <span class="text-gray-700">🎓 B.Tech CSE from IIT Ropar (2024)</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-2 h-2 bg-purple-600 rounded-full"></span>
+                            <span class="text-gray-700">💼 2+ years of development experience</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-2 h-2 bg-purple-600 rounded-full"></span>
+                            <span class="text-gray-700">🌍 Open to relocation worldwide</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-purple-50 to-blue-50 p-8 rounded-2xl">
+                    <h4 class="text-lg font-semibold mb-4">Quick Stats</h4>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-purple-600">10K+</div>
+                            <div class="text-sm text-gray-600">Users Served</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-purple-600">85%</div>
+                            <div class="text-sm text-gray-600">Completion Rate</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-purple-600">4+</div>
+                            <div class="text-sm text-gray-600">Major Projects</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-purple-600">100%</div>
+                            <div class="text-sm text-gray-600">Mobile Responsive</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-4 gradient-text">Featured Projects</h2>
+            <p class="text-center text-gray-600 mb-12">Building real-world solutions with modern web technologies</p>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- TeamFlow Project -->
+                <div class="project-card bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-8 border-2 border-purple-200">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">⭐ Featured</span>
+                        <span class="text-sm text-gray-500">Dec 2024</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">TeamFlow</h3>
+                    <p class="text-gray-600 mb-4">
+                        Real-time collaborative workspace with Kanban boards, live document editing, team chat, and video calls. 
+                        Built with Next.js 14, TypeScript, Socket.io, and PostgreSQL.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">Next.js 14</span>
+                        <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">TypeScript</span>
+                        <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">Socket.io</span>
+                        <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">Prisma</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="https://team-flow-alpha.vercel.app/" target="_blank" 
+                           class="bg-purple-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-purple-700 transition">
+                            Live Demo →
+                        </a>
+                        <a href="https://github.com/Aryan-Dev26" target="_blank" 
+                           class="border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-medium hover:bg-gray-50 transition">
+                            GitHub →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- AlgoVizard Project -->
+                <div class="project-card bg-white rounded-xl p-8 border-2 border-gray-200 hover:border-purple-300">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">📚 Educational</span>
+                        <span class="text-sm text-gray-500">Jul-Aug 2024</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">AlgoVizard</h3>
+                    <p class="text-gray-600 mb-4">
+                        Interactive algorithm visualization platform with 14+ algorithms, ML-based user analytics, and dual-theme UI. 
+                        Serves 10,000+ monthly users with 85% completion rate.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Flask</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Python</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">ML Analytics</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="https://algo-vizard.vercel.app/" target="_blank" 
+                           class="bg-purple-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-purple-700 transition">
+                            Live Demo →
+                        </a>
+                        <a href="https://github.com/Aryan-Dev26/AlgoVizard" target="_blank" 
+                           class="border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-medium hover:bg-gray-50 transition">
+                            GitHub →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- IAMD Website Project -->
+                <div class="project-card bg-white rounded-xl p-8 border-2 border-gray-200 hover:border-purple-300">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-medium">🏢 Client Work</span>
+                        <span class="text-sm text-gray-500">Nov 2024</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">IAMD Website</h3>
+                    <p class="text-gray-600 mb-4">
+                        Full-featured organizational website for Indian Association of Muscular Dystrophy with comprehensive 
+                        admin panel and 100% mobile-responsive design.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Next.js</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">React</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Responsive</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="https://iamd-website.vercel.app/" target="_blank" 
+                           class="bg-purple-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-purple-700 transition">
+                            Live Demo →
+                        </a>
+                        <a href="https://github.com/Aryan-Dev26/IAMD_Website" target="_blank" 
+                           class="border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-medium hover:bg-gray-50 transition">
+                            GitHub →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Network Anomaly Detection Project -->
+                <div class="project-card bg-white rounded-xl p-8 border-2 border-gray-200 hover:border-purple-300">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-medium">🔒 Security</span>
+                        <span class="text-sm text-gray-500">Aug 2024</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Network Anomaly Detection</h3>
+                    <p class="text-gray-600 mb-4">
+                        ML-powered network security system using Isolation Forest algorithm with Flask dashboard for 
+                        real-time anomaly detection and comprehensive analytics.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Python</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Flask</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Machine Learning</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="https://github.com/Aryan-Dev26/intelligent-network-analysis" target="_blank" 
+                           class="border border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-medium hover:bg-gray-50 transition">
+                            GitHub →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-4 gradient-text">Technical Skills</h2>
+            <p class="text-center text-gray-600 mb-12">Technologies I work with daily</p>
+            
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-gray-700 flex items-center gap-2">
+                        <span class="w-3 h-3 bg-blue-500 rounded-full"></span>
+                        Frontend Development
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-badge bg-blue-100 text-blue-700 px-4 py-2 rounded-lg font-medium">React.js</span>
+                        <span class="skill-badge bg-blue-100 text-blue-700 px-4 py-2 rounded-lg font-medium">Next.js 14</span>
+                        <span class="skill-badge bg-blue-100 text-blue-700 px-4 py-2 rounded-lg font-medium">TypeScript</span>
+                        <span class="skill-badge bg-blue-100 text-blue-700 px-4 py-2 rounded-lg font-medium">JavaScript ES6+</span>
+                        <span class="skill-badge bg-blue-100 text-blue-700 px-4 py-2 rounded-lg font-medium">HTML5/CSS3</span>
+                        <span class="skill-badge bg-blue-100 text-blue-700 px-4 py-2 rounded-lg font-medium">Tailwind CSS</span>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-gray-700 flex items-center gap-2">
+                        <span class="w-3 h-3 bg-purple-500 rounded-full"></span>
+                        UI/UX & Animation
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-badge bg-purple-100 text-purple-700 px-4 py-2 rounded-lg font-medium">Responsive Design</span>
+                        <span class="skill-badge bg-purple-100 text-purple-700 px-4 py-2 rounded-lg font-medium">Framer Motion</span>
+                        <span class="skill-badge bg-purple-100 text-purple-700 px-4 py-2 rounded-lg font-medium">CSS Animations</span>
+                        <span class="skill-badge bg-purple-100 text-purple-700 px-4 py-2 rounded-lg font-medium">Figma</span>
+                        <span class="skill-badge bg-purple-100 text-purple-700 px-4 py-2 rounded-lg font-medium">User Experience</span>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-gray-700 flex items-center gap-2">
+                        <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+                        Backend & APIs
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-badge bg-green-100 text-green-700 px-4 py-2 rounded-lg font-medium">Flask</span>
+                        <span class="skill-badge bg-green-100 text-green-700 px-4 py-2 rounded-lg font-medium">RESTful APIs</span>
+                        <span class="skill-badge bg-green-100 text-green-700 px-4 py-2 rounded-lg font-medium">Node.js</span>
+                        <span class="skill-badge bg-green-100 text-green-700 px-4 py-2 rounded-lg font-medium">Socket.io</span>
+                        <span class="skill-badge bg-green-100 text-green-700 px-4 py-2 rounded-lg font-medium">WebRTC</span>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-gray-700 flex items-center gap-2">
+                        <span class="w-3 h-3 bg-gray-500 rounded-full"></span>
+                        Database & Tools
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-badge bg-gray-100 text-gray-700 px-4 py-2 rounded-lg font-medium">PostgreSQL</span>
+                        <span class="skill-badge bg-gray-100 text-gray-700 px-4 py-2 rounded-lg font-medium">Prisma ORM</span>
+                        <span class="skill-badge bg-gray-100 text-gray-700 px-4 py-2 rounded-lg font-medium">Git/GitHub</span>
+                        <span class="skill-badge bg-gray-100 text-gray-700 px-4 py-2 rounded-lg font-medium">VS Code</span>
+                        <span class="skill-badge bg-gray-100 text-gray-700 px-4 py-2 rounded-lg font-medium">Vercel</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 bg-gray-50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-4 gradient-text">Let's Work Together</h2>
+            <p class="text-center text-gray-600 mb-12">Open to full-time opportunities | Available for relocation worldwide</p>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-6">
+                    <h3 class="text-xl font-semibold mb-4">Get In Touch</h3>
+                    <div class="space-y-4">
+                        <a href="mailto:aryan.cse26@gmail.com" class="flex items-center gap-4 p-4 bg-white rounded-lg border hover:border-purple-400 hover:shadow-lg transition">
+                            <div class="text-2xl">📧</div>
+                            <div>
+                                <div class="font-medium text-gray-700">Email</div>
+                                <div class="text-sm text-gray-500">aryan.cse26@gmail.com</div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://github.com/Aryan-Dev26" target="_blank" class="flex items-center gap-4 p-4 bg-white rounded-lg border hover:border-purple-400 hover:shadow-lg transition">
+                            <div class="text-2xl">💻</div>
+                            <div>
+                                <div class="font-medium text-gray-700">GitHub</div>
+                                <div class="text-sm text-gray-500">@Aryan-Dev26</div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/in/aryansahu2891" target="_blank" class="flex items-center gap-4 p-4 bg-white rounded-lg border hover:border-purple-400 hover:shadow-lg transition">
+                            <div class="text-2xl">💼</div>
+                            <div>
+                                <div class="font-medium text-gray-700">LinkedIn</div>
+                                <div class="text-sm text-gray-500">aryansahu2891</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 border">
+                    <h3 class="text-xl font-semibold mb-4">Professional Info</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <span class="text-purple-600 mt-1">📍</span>
+                            <div>
+                                <div class="font-medium">Current Location</div>
+                                <div class="text-gray-600">Amravati, Maharashtra, India</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-3">
+                            <span class="text-purple-600 mt-1">🎓</span>
+                            <div>
+                                <div class="font-medium">Education</div>
+                                <div class="text-gray-600">B.Tech CSE, IIT Ropar (2024)</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-3">
+                            <span class="text-purple-600 mt-1">💼</span>
+                            <div>
+                                <div class="font-medium">Status</div>
+                                <div class="text-gray-600">Actively seeking frontend developer positions</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-3">
+                            <span class="text-purple-600 mt-1">🌍</span>
+                            <div>
+                                <div class="font-medium">Availability</div>
+                                <div class="text-gray-600">Open to relocation worldwide</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 bg-gray-900 text-white text-center">
+        <div class="max-w-4xl mx-auto">
+            <p class="mb-2">© 2024 Aryan Sahu. Built with passion using modern web technologies.</p>
+            <p class="text-gray-400 text-sm">React • Next.js • TypeScript • Tailwind CSS</p>
+            <div class="mt-4 flex justify-center gap-6">
+                <a href="https://github.com/Aryan-Dev26" target="_blank" class="text-gray-400 hover:text-white transition">GitHub</a>
+                <a href="https://www.linkedin.com/in/aryansahu2891" target="_blank" class="text-gray-400 hover:text-white transition">LinkedIn</a>
+                <a href="mailto:aryan.cse26@gmail.com" class="text-gray-400 hover:text-white transition">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-white/95');
+                nav.classList.remove('bg-white/90');
+            } else {
+                nav.classList.add('bg-white/90');
+                nav.classList.remove('bg-white/95');
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
