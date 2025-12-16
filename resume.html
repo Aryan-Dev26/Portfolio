@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aryan Sahu - Frontend Developer Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.4;
+            color: #333;
+            background: white;
+            font-size: 11pt;
+        }
+        
+        .resume {
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+            background: white;
+            min-height: 11in;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 15px;
+        }
+        
+        .name {
+            font-size: 28pt;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 5px;
+        }
+        
+        .title {
+            font-size: 14pt;
+            color: #4b5563;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 10pt;
+            color: #6b7280;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .section {
+            margin-bottom: 18px;
+        }
+        
+        .section-title {
+            font-size: 13pt;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 3px;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .experience-item, .project-item {
+            margin-bottom: 12px;
+        }
+        
+        .job-title {
+            font-weight: 600;
+            color: #1f2937;
+            font-size: 11pt;
+        }
+        
+        .company {
+            color: #2563eb;
+            font-weight: 500;
+        }
+        
+        .date-location {
+            font-size: 9pt;
+            color: #6b7280;
+            font-style: italic;
+            margin-bottom: 4px;
+        }
+        
+        .description {
+            margin-left: 0;
+            font-size: 10pt;
+            line-height: 1.3;
+        }
+        
+        .description li {
+            margin-bottom: 2px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+        
+        .skill-category {
+            margin-bottom: 10px;
+        }
+        
+        .skill-category-title {
+            font-weight: 600;
+            color: #1f2937;
+            font-size: 10pt;
+            margin-bottom: 4px;
+        }
+        
+        .skill-list {
+            font-size: 9pt;
+            color: #4b5563;
+            line-height: 1.3;
+        }
+        
+        .education-item {
+            margin-bottom: 8px;
+        }
+        
+        .degree {
+            font-weight: 600;
+            color: #1f2937;
+        }
+        
+        .institution {
+            color: #2563eb;
+            font-weight: 500;
+        }
+        
+        .project-title {
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 2px;
+        }
+        
+        .tech-stack {
+            font-size: 9pt;
+            color: #7c3aed;
+            font-weight: 500;
+            margin-bottom: 3px;
+        }
+        
+        .links {
+            font-size: 9pt;
+            color: #2563eb;
+        }
+        
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            .resume {
+                padding: 0.3in;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume">
+        <!-- Header -->
+        <div class="header">
+            <div class="name">Aryan Sahu</div>
+            <div class="title">Frontend Developer</div>
+            <div class="contact-info">
+                <div class="contact-item">📧 aryan.cse26@gmail.com</div>
+                <div class="contact-item">📱 +91-7345488838</div>
+                <div class="contact-item">💻 github.com/Aryan-Dev26</div>
+                <div class="contact-item">💼 linkedin.com/in/aryansahu2891</div>
+                <div class="contact-item">🌐 aryan-dev26.github.io/Portfolio</div>
+            </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <div class="section">
+            <div class="section-title">Professional Summary</div>
+            <p style="font-size: 10pt; line-height: 1.4;">
+                Frontend Developer with 2+ years of experience building modern web applications using React, Next.js, and TypeScript. 
+                IIT Ropar Computer Science graduate with proven track record of delivering production-ready applications and educational tools. 
+                Specialized in creating responsive, user-friendly interfaces and real-time collaborative systems. 
+                Seeking frontend developer opportunities with potential for international relocation.
+            </p>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <div class="section-title">Education</div>
+            <div class="education-item">
+                <div class="degree">Bachelor of Technology in Computer Science & Engineering</div>
+                <div class="institution">Indian Institute of Technology, Ropar</div>
+                <div class="date-location">2020 - 2024 | Punjab, India</div>
+            </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-category-title">Frontend Development</div>
+                    <div class="skill-list">
+                        • React.js & Next.js 14<br>
+                        • TypeScript & JavaScript ES6+<br>
+                        • HTML5 & CSS3<br>
+                        • Tailwind CSS<br>
+                        • Responsive Design
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Backend & APIs</div>
+                    <div class="skill-list">
+                        • Flask & Node.js<br>
+                        • RESTful APIs<br>
+                        • Socket.io & WebRTC<br>
+                        • PostgreSQL & Prisma ORM<br>
+                        • Real-time Systems
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">Tools & Technologies</div>
+                    <div class="skill-list">
+                        • Git & GitHub<br>
+                        • VS Code & Figma<br>
+                        • Vercel & GitHub Pages<br>
+                        • Machine Learning (Python)<br>
+                        • Agile Development
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="section">
+            <div class="section-title">Key Projects</div>
+            
+            <div class="project-item">
+                <div class="project-title">TeamFlow - Real-time Collaborative Workspace</div>
+                <div class="tech-stack">Next.js 14 • TypeScript • Socket.io • Prisma • PostgreSQL</div>
+                <div class="description">
+                    • Developed full-stack collaborative platform with Kanban boards, live document editing, team chat, and video calls<br>
+                    • Implemented real-time synchronization using Socket.io for seamless multi-user collaboration<br>
+                    • Built responsive UI with TypeScript for type safety and better developer experience<br>
+                    • Integrated WebRTC for peer-to-peer video communication and file sharing
+                </div>
+                <div class="links">🔗 Live: team-flow-alpha.vercel.app | GitHub: github.com/Aryan-Dev26</div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">AlgoVizard - Algorithm Visualization Platform</div>
+                <div class="tech-stack">Flask • JavaScript • Python • Machine Learning</div>
+                <div class="description">
+                    • Created interactive educational platform with 14+ algorithm visualizations and comprehensive testing<br>
+                    • Designed intuitive UI/UX with step-by-step animations for enhanced learning experience<br>
+                    • Implemented ML-based user analytics to track learning patterns and optimize user experience<br>
+                    • Built dual-theme interface with responsive design for enhanced accessibility
+                </div>
+                <div class="links">🔗 Live: algo-vizard.vercel.app | GitHub: github.com/Aryan-Dev26/AlgoVizard</div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">IAMD Website - Organizational Platform</div>
+                <div class="tech-stack">Next.js • React • Responsive Design</div>
+                <div class="description">
+                    • Developed comprehensive website for Indian Association of Muscular Dystrophy with admin panel<br>
+                    • Implemented 100% mobile-responsive design ensuring accessibility across all devices<br>
+                    • Created content management system for easy updates and maintenance<br>
+                    • Optimized for SEO and performance with Next.js best practices
+                </div>
+                <div class="links">🔗 Live: iamd-website.vercel.app | GitHub: github.com/Aryan-Dev26/IAMD_Website</div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">Network Anomaly Detection System</div>
+                <div class="tech-stack">Python • Flask • Machine Learning • Data Analytics</div>
+                <div class="description">
+                    • Built ML-powered security system using Isolation Forest algorithm for real-time anomaly detection<br>
+                    • Developed Flask dashboard for visualizing security alerts and generating comprehensive reports<br>
+                    • Implemented data simulation pipeline for testing and validation of detection algorithms<br>
+                    • Created user-friendly interface for network administrators to monitor and respond to threats
+                </div>
+                <div class="links">🔗 GitHub: github.com/Aryan-Dev26/intelligent-network-analysis</div>
+            </div>
+        </div>
+
+        <!-- Additional Information -->
+        <div class="section">
+            <div class="section-title">Additional Information</div>
+            <div class="two-column">
+                <div>
+                    <div class="skill-category-title">Achievements</div>
+                    <div class="skill-list">
+                        • Built comprehensive educational platform<br>
+                        • Designed 14+ interactive algorithm visualizations<br>
+                        • Built production-ready applications<br>
+                        • Open source contributor
+                    </div>
+                </div>
+                <div>
+                    <div class="skill-category-title">Languages & Availability</div>
+                    <div class="skill-list">
+                        • English (Fluent)<br>
+                        • Hindi (Native)<br>
+                        • Open to relocation worldwide<br>
+                        • Available for immediate joining
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

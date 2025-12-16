@@ -38,7 +38,7 @@ Real-time collaborative workspace with Kanban boards, live document editing, tea
 - **Live Demo**: [team-flow-alpha.vercel.app](https://team-flow-alpha.vercel.app/)
 
 ### AlgoVizard
-Interactive algorithm visualization platform serving 10,000+ monthly users.
+Interactive algorithm visualization platform with 14+ algorithms and comprehensive learning tools.
 - **Tech Stack**: Flask, JavaScript, Python, ML Analytics
 - **Live Demo**: [algo-vizard.vercel.app](https://algo-vizard.vercel.app/)
 
