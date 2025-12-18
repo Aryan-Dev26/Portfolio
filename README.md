@@ -4,7 +4,7 @@ A modern, responsive portfolio website showcasing my skills as a Frontend Develo
 
 ## 🚀 Live Demo
 
-Visit the live portfolio: [https://aryan-dev26.github.io/portfolio](https://aryan-dev26.github.io/portfolio)
+Visit the live portfolio: [https://aryan-dev26.github.io/portfolio](https://aryan-dev26.github.io/Portfolio)
 
 ## 🛠️ Built With
 
